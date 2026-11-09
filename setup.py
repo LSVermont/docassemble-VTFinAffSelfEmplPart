@@ -1,6 +1,6 @@
 import os
 import sys
-from setuptools import setup, find_packages
+from setuptools import setup, find_namespace_packages
 from fnmatch import fnmatchcase
 from distutils.util import convert_path
 
@@ -52,8 +52,7 @@ setup(name='docassemble.VTFinAffSelfEmplPart',
       author_email='ksurette@lawlinevt.org',
       license='The MIT License',
       url='https://vtlawhelp.org',
-      packages=find_packages(),
-      namespace_packages=['docassemble'],
+      packages=find_namespace_packages(),
       install_requires=['docassemble.ALAnyState>=0.1.0', 'docassemble.AssemblyLine>=3.2.0', 'docassemble.VTFeedback', 'docassemble.VTSharedYMLFile'],
       zip_safe=False,
       package_data=find_package_data(where='docassemble/VTFinAffSelfEmplPart/', package='docassemble.VTFinAffSelfEmplPart'),
